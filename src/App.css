@@ -1,0 +1,143 @@
+.homepage {
+  min-height: 100vh;
+  padding: 2rem 1rem 3rem;
+  color: #f4f4f4;
+  background:
+    radial-gradient(circle at center, #1b2455 0%, #090c1f 50%, #02030a 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 0.5rem;
+}
+
+.intro p {
+  margin: 0;
+  color: #cdd4ff;
+}
+
+.solar-system {
+  position: relative;
+  width: min(92vw, 960px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.sun {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff29b 0%, #ffcc33 60%, #ff9800 100%);
+  box-shadow: 0 0 24px #ffba00;
+  z-index: 1;
+}
+
+.orbit {
+  --orbit-size: 200px;
+  --duration: 20s;
+
+  position: absolute;
+  width: var(--orbit-size);
+  height: var(--orbit-size);
+  border: 1px solid rgba(173, 204, 255, 0.2);
+  border-radius: 50%;
+  animation: spin var(--duration) linear infinite;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.planet {
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.mercury {
+  width: 8px;
+  height: 8px;
+  background: #b1a79a;
+}
+
+.venus {
+  width: 12px;
+  height: 12px;
+  background: #e5b56f;
+}
+
+.earth {
+  width: 13px;
+  height: 13px;
+  background: #46a0ff;
+}
+
+.mars {
+  width: 10px;
+  height: 10px;
+  background: #d16b4e;
+}
+
+.jupiter {
+  width: 24px;
+  height: 24px;
+  background: #d8b38a;
+}
+
+.saturn {
+  width: 20px;
+  height: 20px;
+  background: #d9c18a;
+}
+
+.uranus {
+  width: 15px;
+  height: 15px;
+  background: #8dd5e8;
+}
+
+.neptune {
+  width: 15px;
+  height: 15px;
+  background: #5272ff;
+}
+
+.legend {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem 1rem;
+  max-width: 800px;
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #dbe1ff;
+}
+
+.legend-dot {
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
